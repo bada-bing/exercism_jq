@@ -1,0 +1,7 @@
+*.bats
+.exercism/
+HELP.md
+HINTS.md
+README.md
+bats-extra.bash
+bats-jq.bash
