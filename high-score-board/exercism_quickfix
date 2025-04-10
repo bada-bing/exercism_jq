@@ -1,0 +1,32 @@
+Running tests via `bats test-high-score-board.bats`
+
+1..9
+ok 1 creates_a_new_board_with_a_test_entry
+ok 2 adds_a_player_and_score_to_the_board
+ok 3 removes_a_player_from_the_score_board
+ok 4 does_nothing_if_the_player_is_not_on_the_board
+not ok 5 increases_a_players_score
+# (from function `assert_equal' in file bats-extra.bash, line 178,
+#  from function `assert_key_value' in file test-high-score-board.bats, line 8,
+#  in test file test-high-score-board.bats, line 86)
+#   `assert_key_value "Min-seo Shin"    1999 "$output"' failed
+#
+# -- values do not equal --
+# expected : 1999
+# actual   : -1999
+# --
+#
+not ok 6 adds_100_points_for_all_players
+# (from function `assert_equal' in file bats-extra.bash, line 178,
+#  from function `assert_key_value' in file test-high-score-board.bats, line 8,
+#  in test file test-high-score-board.bats, line 103)
+#   `assert_key_value "Amil Pastorius" 445 "$output"' failed
+#
+# -- values do not equal --
+# expected : 445
+# actual   : 446
+# --
+#
+ok 7 does_nothing_if_the_score_board_is_empty
+ok 8 total_score
+ok 9 total_score_empty_board
